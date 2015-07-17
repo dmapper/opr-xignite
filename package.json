@@ -1,0 +1,26 @@
+{
+  "name": "opr-xignite",
+  "version": "1.0.0",
+  "description": "Module for work with xignite api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmapper/opr-xignite.git"
+  },
+  "keywords": [
+    "xignite",
+    "api"
+  ],
+  "author": "Eugene Orekhov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmapper/opr-xignite/issues"
+  },
+  "homepage": "https://github.com/dmapper/opr-xignite#readme",
+  "dependencies": {
+    "request": "^2.58.0"
+  }
+}

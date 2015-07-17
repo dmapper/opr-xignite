@@ -39,7 +39,7 @@
 You also can use common method for some api
 
 ```
-  var xgnite = require('./index')('868198AD065847AAB5569F768C94AAD7');
+  var xgnite = require('./index')('{{TOKEN HERE}}');
   
   xgnite.get('getAllEquityOptionChain', {
     IdentifierType: 'Symbol',

@@ -4,30 +4,23 @@
 
 ### Delayed Equity Option Quote API List
 
-- Option Chains
-  GetAllEquityOptionChain
-  GetAllExtendedEquityOptionChain
-  GetEquityOptionChain
-  GetExtendedEquityOptionChain
-
-- Lookups
-  GetEquityOptionSymbol
-  
-- Quotes
-  GetEquityOption
-  GetExtendedEquityOption
-  GetEquityOptionBySymbol
-  GetExtendedEquityOptionBySymbol
-  GetEquityOptionBySymbols
-  GetExtendedEquityOptionBySymbols
-  
-- Utilities
-  GetBlackScholesOptionValue
+- GetAllEquityOptionChain
+- GetAllExtendedEquityOptionChain
+- GetEquityOptionChain
+- GetExtendedEquityOptionChain
+- GetEquityOptionSymbol
+- GetEquityOption
+- GetExtendedEquityOption
+- GetEquityOptionBySymbol
+- GetExtendedEquityOptionBySymbol
+- GetEquityOptionBySymbols
+- GetExtendedEquityOptionBySymbols
+- GetBlackScholesOptionValue
 
 ## How to use
 
 ```
-  var xgnite = require('./index')('868198AD065847AAB5569F768C94AAD7');
+  var xgnite = require('./index')('{{TOKEN HERE}}');
   
   xgnite.getAllEquityOptionChain({
     IdentifierType: 'Symbol',

@@ -43,7 +43,7 @@ module.exports = function (token) {
     }
 
     if (!subdomain || !product) {
-      return callback('Can\'t define subdomain and product parameters');
+      return callback(new Error('Can\'t define subdomain and product parameters'));
     }
 
     url = _getApiUrl(subdomain, product, method, token, params);

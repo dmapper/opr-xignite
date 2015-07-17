@@ -1,6 +1,6 @@
 # Module to pull data from Xignite API
 
-## Available nex api list
+## Available next api list
 
 ### Delayed Equity Option Quote API List
 

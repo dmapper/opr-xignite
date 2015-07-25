@@ -20,9 +20,9 @@
 ## How to use
 
 ```
-  var xgnite = require('./index')('{{TOKEN HERE}}');
+  var xignite = require('xignite')('{{TOKEN HERE}}');
   
-  xgnite.getAllEquityOptionChain({
+  xignite.getAllEquityOptionChain({
     IdentifierType: 'Symbol',
     Identifier: 'MSFT',
     SymbologyType: '',
@@ -39,9 +39,9 @@
 You also can use common method for some api
 
 ```
-  var xgnite = require('./index')('{{TOKEN HERE}}');
+  var xignite = require('xignite')('{{TOKEN HERE}}');
   
-  xgnite.get('getAllEquityOptionChain', {
+  xignite.get('getAllEquityOptionChain', {
     IdentifierType: 'Symbol',
     Identifier: 'MSFT',
     SymbologyType: '',

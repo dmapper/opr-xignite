@@ -7,7 +7,7 @@ module.exports = function (token) {
 
   function _getApiUrl(subdomain, product, method, token, params) {
     var query = '', queryPairs = [], url;
-    
+
     for (var param in params) {
       queryPairs.push(param + '=' + params[param])
     }
@@ -51,13 +51,13 @@ module.exports = function (token) {
     request(url, function (error, response, body) {
       if (!error && response.statusCode == 200) {
         var data = JSON.parse(body);
-        if (data.Message === null && data.Outcome === 'Success') {
+        if (data.Outcome === 'Success') {
           return callback(null, data);
         } else {
-          callback(Error(data.Outcome + ' ' + data.Message));
+          callback(new Error(data.Outcome + ' ' + data.Message));
         }
       }
-      return new callback(Error('Some request error'));
+      return callback(new Error('Some request error'));
     });
   }
 
@@ -88,7 +88,7 @@ module.exports = function (token) {
       return _process('GetAllEquityOptionChain', params, callback);
     },
     /**
-     * Returns the complete option chain with extended information 
+     * Returns the complete option chain with extended information
      * for an equity.
      *
      * @link http://www.xignite.com/product/global-option-price-data/api/GetAllExtendedEquityOptionChain/
@@ -100,7 +100,7 @@ module.exports = function (token) {
       return _process('GetAllExtendedEquityOptionChain', params, callback);
     },
     /**
-     * Returns the option chain for an equity for a given expiration 
+     * Returns the option chain for an equity for a given expiration
      * (month & year)
      *
      * @link http://www.xignite.com/product/global-option-price-data/api/GetEquityOptionChain/
@@ -112,7 +112,7 @@ module.exports = function (token) {
       return _process('GetEquityOptionChain', params, callback);
     },
     /**
-     * Returns the option chain with extended information for an equity 
+     * Returns the option chain with extended information for an equity
      * for a given expiration (month & year)
      *
      * @link http://www.xignite.com/product/global-option-price-data/api/GetExtendedEquityOptionChain/
@@ -210,4 +210,3 @@ module.exports = function (token) {
     },
   }
 };
-
